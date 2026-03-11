@@ -2,6 +2,7 @@ DROP TABLE users;
 DROP TABLE employers;
 DROP TABLE conversations;
 
+-- Type was store from the initial creation, so cannot create again as it already exists
 -- CREATE TYPE employment_status AS ENUM('self-employed', 'employed', 'unemployed'); -- Postgresql
 
 CREATE TABLE users (
@@ -27,5 +28,6 @@ CREATE TABLE conversations (
   -- id INT PRIMARY KEY AUTO_INCREMENT, -- MySQL
   user_id INT,
   employer_id INT,
-  message TEXT NOT NULL
+  message TEXT NOT NULL,
+  date_sent TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
