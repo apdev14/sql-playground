@@ -17,4 +17,4 @@ SELECT id, first_name FROM users
 UNION 
 SELECT id, street FROM addresses;
 
--- this works but doesnt really make sense 
+-- this works but doesnt really make sense to do as the column data is different for each select statement
